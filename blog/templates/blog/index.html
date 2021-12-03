@@ -1,0 +1,28 @@
+{% extends "base.html" %} {% load static %} {% block title %} My Blog {% endblock %} {% block css_files %}
+<link rel="stylesheet" href="{% static 'blog/post.css' %}" />
+<link rel="stylesheet" href="{% static 'blog/index.css' %}" /> {% endblock %} {% block content %}
+<section id="welcome">
+    <header>
+        <img src="{% static 'blog/images/sergey.png' %}" alt="Sergey - The Author Of This Blog" />
+        <h2>SERGEY'S BLOG</h2>
+    </header>
+    <p>Hi, I am Sergey this is my practic blog project!</p>
+</section>
+
+<section id="latest-posts">
+    <h2>My Latest Posts</h2>
+
+    <ul>
+        {% for post in posts %} {% include 'blog/includes/post.html' %} {% endfor %}
+    </ul>
+</section>
+
+<section id="about">
+    <h2>What I Do</h2>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione ea illum enim nobis officia nesciunt nisi, corporis commodi eaque, repudiandae suscipit qui id! Facilis nobis facere veniam nam ex? Non ea sunt nam ex sint enim excepturi nulla ad,
+        numquam delectus pariatur maxime architecto ratione totam itaque ullam facere. Sunt pariatur, at qui incidunt cum vero quas sapiente nemo repellendus!
+    </p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi in, quia beatae dolor eius reiciendis tempora? Blanditiis consequuntur nisi sint aliquid natus eos maiores dicta nam. Itaque nihil libero ex!
+    </p>
+</section>
+{% endblock %}
