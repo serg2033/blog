@@ -7,7 +7,6 @@ from django.views import View
 from .models import Post
 from .forms import CommentForm
 
-# Create your views here.
 
 
 class StartingPageView(ListView):
